@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tesla</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="head">
+    <a class="imgLink" href="Autosalloni.html">
+         <img src="images/Tesla Logo.png" style= "width: 130px; height: 100%; margin-left: 0;"/>
+    </a>
+    <div class="HomeLinks">
+        <a href="AboutUs.html">About us</a>
+        <a href="ContactUs.html">Contact us</a>
+        <a href="Products.html">Products</a>
+        <a href="LoginRegister.html">Login/Register</a>
+    </div>
+    </header>
+    <div class="container">
+      <div class="links link">
+        <a id="firstA" class="a1" href="#" onclick="changeForm(0)">Login</a>
+        <a href="#" class="a2"  onclick="changeForm(1)">Register</a>
+      </div>
+      <form id="mainForm" action="">
+        <div class="login forms LoginClass form-style">
+          <label for="">Username:</label><br>
+          <input type="text" id='username' class="input" placeholder="username..." /><br>
+          <label for="">Password:</label><br>
+          <input type="password" class="input" placeholder="password..." /><br>
+          <input id="submit" type="button" class="input submit" value="Login" onclick="validate('login')" />
+        </div>
+        <div class="register LoginClass forms hidden">
+          <label for="">Name:</label><br>
+          <input type="text" class="input" placeholder="username..." /><br>
+          <label for="">Lastname:</label><br>
+          <input type="text" class="input" placeholder="lastname..." /><br>
+          <label for="">Email:</label><br>
+          <input type="email" class="input" placeholder="email..." /><br>
+          <label for="">Password:</label><br>
+          <input type="password" class="input" placeholder="Password..." /><br>
+          <label for="">Confirm Password:</label><br>
+          <input type="password" class="input" placeholder="Confirm-Pass..." /><br>
+          <input id="submit" type="button" name='btnSubmit' class="input submit" value="Register" onclick="validate('register')" />
+        </div>
+      </form>
+    </div>
+    <footer>
+      <p>	&copy;Tesla Company 2020</p>
+  </footer>
+    <script src="JS/main.js"></script>
+</body>
+</html>
