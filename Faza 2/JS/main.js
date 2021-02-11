@@ -1,21 +1,41 @@
-var divElements = document.getElementsByClassName('slider-content');
+// Fillimi slider
+
+var divElements = document.getElementsByClassName('item');
         var sliderIndex = 0;
 
-        document.getElementsByClassName('slider')[0].addEventListener('click', function(event){
-            divElements[sliderIndex].classList.remove('active');
-            divElements[sliderIndex].classList.add('not-active');
+     document.getElementsByClassName('right-slide')[0].addEventListener('click', function(event){
+        divElements[sliderIndex].classList.remove('active');
+        divElements[sliderIndex].classList.add('not-active');
 
-            sliderIndex++;
+        sliderIndex++;
             if(sliderIndex==divElements.length){
                 sliderIndex = 0;
             }
 
-            divElements[sliderIndex].classList.add('active');
-            divElements[sliderIndex].classList.remove('not-active');
+        divElements[sliderIndex].classList.add('active');
+        divElements[sliderIndex].classList.remove('not-active');
 
 
-            }
-        )
+        }
+    )
+    document.getElementsByClassName('left-slide')[0].addEventListener('click', function(event){
+        divElements[sliderIndex].classList.remove('active');
+        divElements[sliderIndex].classList.add('not-active');
+
+        if(sliderIndex == 0){
+            sliderIndex = divElements.length-1;
+        }
+        else{
+            sliderIndex--;
+        }
+
+        divElements[sliderIndex].classList.add('active');
+        divElements[sliderIndex].classList.remove('not-active');
+
+
+        }
+    )
+// Mbarimi slider
         function validate(str){
             var inputList = document.getElementsByClassName("input");
             if(str == "login"){
